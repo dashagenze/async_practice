@@ -7,7 +7,7 @@ const SIZE_DATA = document.getElementById('SIZE');
 const NAME_DATA = document.getElementById('NAME');
 
 
-const url = 'http://localhost:3000/coffeeOrder';
+const url = 'http://localhost:3001/coffeeOrder';
 
 
 SIZE_DATA.style.display = 'none';

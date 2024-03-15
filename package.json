@@ -1,0 +1,16 @@
+{
+  "name": "async_practice",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel ./index.html -p 3000",
+    "json": "json-server ./db.json -p 3001",
+    "all": "json-server ./db.json -p 3001 && parcel public/index.html -p 3000"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  }
+}
