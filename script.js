@@ -67,7 +67,7 @@ async function q() {
 
 async function postCoffee(coffee) {
     fetch(url, {
-        method: 'PUT',
+        method: 'POST',
         body: JSON.stringify({
             coffee: coffee,
         }),
@@ -82,7 +82,7 @@ async function postCoffee(coffee) {
 
 async function postSize(size) {
     fetch(url, {
-        method: 'POST',
+        method: 'PATCH',
         body: JSON.stringify({
             size: size,
         }),
@@ -98,7 +98,7 @@ async function postSize(size) {
 
 async function postName(name) {
     fetch(url, {
-        method: 'POST',
+        method: 'PATCH',
         body: JSON.stringify({
             name: name,
         }),
