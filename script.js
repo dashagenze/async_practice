@@ -6,6 +6,7 @@ const COFFEE_DATA = document.getElementById('COFFEE');
 const SIZE_DATA = document.getElementById('SIZE');
 const NAME_DATA = document.getElementById('NAME');
 
+let currentId = Date.now();
 
 const url = 'http://localhost:3001/coffeeOrder';
 
@@ -70,6 +71,7 @@ async function postCoffee(coffee) {
         method: 'POST',
         body: JSON.stringify({
             coffee: coffee,
+            id: currentId
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -81,7 +83,7 @@ async function postCoffee(coffee) {
 }
 
 async function postSize(size) {
-    fetch(url, {
+    fetch(url + '/' + currentId, {
         method: 'PATCH',
         body: JSON.stringify({
             size: size,
@@ -97,7 +99,7 @@ async function postSize(size) {
 }
 
 async function postName(name) {
-    fetch(url, {
+    fetch(url + '/' + currentId, {
         method: 'PATCH',
         body: JSON.stringify({
             name: name,
