@@ -7,14 +7,14 @@
         *{font-size: 24px; font-family: 'Raleway', serif}
         body {display: flex; justify-content: center; align-items: center; flex-direction: column; background-color: oldlace}
         img { height: 400px; object-fit: contain; margin: 50px;}
-
+        .displayNone {display: none}
     </style>
 </head>
 <body>
 <br>
 <h1 id="title">Добрый день!</h1>
 
-<img src="assets/signName.gif">
+<img id="img" src="assets/signName.gif" draggable="false">
 <form id="COFFEE">
     <label for="coffeeinput">Какой хотели бы кофе?</label>
     <input type="text" id="coffeeinput" name="coffee">
